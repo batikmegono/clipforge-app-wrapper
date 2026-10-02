@@ -1,136 +1,212 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>ClipForge Studio | MOI Apps Studio</title>
+  <title>ClipForge Studio | MOI Apps Studio</title>
 
-<style>
-*{
-  box-sizing:border-box;
-}
+  <style>
+    *{
+      box-sizing:border-box;
+    }
 
-body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:Arial,Helvetica,sans-serif;
-  color:#fff;
-  background:
-    radial-gradient(circle at top,#172a66 0,#081126 45%,#030711 100%);
-}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Arial,Helvetica,sans-serif;
+      color:#fff;
+      background:
+        radial-gradient(circle at top,#173078 0%,#0b1638 38%,#050915 100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
 
-.card{
-  width:min(92%,520px);
-  padding:36px 26px;
-  border-radius:24px;
-  text-align:center;
-  background:rgba(9,17,42,.92);
-  border:1px solid rgba(255,255,255,.12);
-  box-shadow:0 24px 60px rgba(0,0,0,.45);
-}
+    .card{
+      width:min(100%,520px);
+      background:rgba(8,16,40,.96);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:28px;
+      padding:38px 28px;
+      text-align:center;
+      box-shadow:0 25px 70px rgba(0,0,0,.45);
+    }
 
-.logo{
-  width:76px;
-  height:76px;
-  margin:0 auto 18px;
-  border-radius:20px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:40px;
-  background:linear-gradient(135deg,#7258ff,#21d1c3);
-}
+    .logo{
+      width:88px;
+      height:88px;
+      margin:0 auto 20px;
+      border-radius:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:46px;
+      background:linear-gradient(135deg,#7357ff,#24d5c4);
+      box-shadow:0 12px 32px rgba(70,90,255,.35);
+    }
 
-h1{
-  margin:0;
-  font-size:30px;
-}
+    h1{
+      font-size:32px;
+      margin:0;
+    }
 
-.brand{
-  margin-top:7px;
-  color:#9eabc8;
-}
+    .studio{
+      margin-top:8px;
+      color:#9ba8c5;
+      font-size:15px;
+    }
 
-.status{
-  display:inline-block;
-  margin-top:22px;
-  padding:8px 14px;
-  border-radius:99px;
-  color:#55e6c1;
-  background:#0a2e2a;
-  border:1px solid #185e53;
-  font-size:13px;
-}
+    .badge{
+      display:inline-block;
+      margin-top:22px;
+      padding:8px 14px;
+      border-radius:30px;
+      background:#092c2a;
+      border:1px solid #17635a;
+      color:#58e1c8;
+      font-size:13px;
+      font-weight:bold;
+    }
 
-.desc{
-  margin:25px 0;
-  color:#c7cee0;
-  line-height:1.6;
-}
+    .headline{
+      margin-top:28px;
+      font-size:22px;
+      font-weight:800;
+      line-height:1.35;
+    }
 
-.button{
-  display:block;
-  width:100%;
-  padding:17px;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:18px;
-  color:white;
-  background:linear-gradient(90deg,#6558ff,#9a42ff);
-  box-shadow:0 10px 28px rgba(105,75,255,.35);
-}
+    .desc{
+      margin-top:14px;
+      color:#c2cade;
+      font-size:15px;
+      line-height:1.65;
+    }
 
-.note{
-  margin-top:22px;
-  font-size:12px;
-  color:#75819d;
-}
-</style>
+    .features{
+      margin:26px 0;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+    }
+
+    .feature{
+      background:#101b3d;
+      border:1px solid #26365d;
+      border-radius:14px;
+      padding:14px 8px;
+      font-size:12px;
+      color:#d5dbeb;
+    }
+
+    .feature span{
+      display:block;
+      font-size:22px;
+      margin-bottom:7px;
+    }
+
+    .button{
+      display:block;
+      width:100%;
+      text-decoration:none;
+      color:white;
+      background:linear-gradient(90deg,#6655ff,#9945ff);
+      padding:17px 20px;
+      border-radius:15px;
+      font-size:18px;
+      font-weight:800;
+      box-shadow:0 12px 30px rgba(100,75,255,.35);
+    }
+
+    .button:hover{
+      transform:translateY(-1px);
+    }
+
+    .footer{
+      margin-top:22px;
+      color:#6f7d9b;
+      font-size:12px;
+    }
+
+    @media(max-width:480px){
+      .card{
+        padding:30px 20px;
+      }
+
+      h1{
+        font-size:27px;
+      }
+
+      .headline{
+        font-size:19px;
+      }
+
+      .features{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="card">
+  <div class="card">
 
-  <div class="logo">✂</div>
+    <div class="logo">✂️</div>
 
-  <h1>ClipForge Studio</h1>
+    <h1>ClipForge Studio</h1>
 
-  <div class="brand">
-    by MOI Apps Studio
+    <div class="studio">
+      by MOI Apps Studio
+    </div>
+
+    <div class="badge">
+      ● APLIKASI SIAP DIGUNAKAN
+    </div>
+
+    <div class="headline">
+      Potong Video Panjang<br>
+      Jadi Klip Pendek Lebih Mudah
+    </div>
+
+    <div class="desc">
+      Buat klip untuk YouTube Shorts, TikTok,
+      Instagram Reels dan Facebook dengan proses
+      yang lebih praktis.
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+        <span>✂️</span>
+        Potong Video
+      </div>
+
+      <div class="feature">
+        <span>⚡</span>
+        Cepat Digunakan
+      </div>
+
+      <div class="feature">
+        <span>▶️</span>
+        Siap Upload
+      </div>
+
+    </div>
+
+    <a
+      class="button"
+      href="https://share.gemini.google/DJec3zIE8Oem"
+    >
+      🚀 Buka ClipForge
+    </a>
+
+    <div class="footer">
+      ClipForge Studio • MOI Apps Studio
+    </div>
+
   </div>
-
-  <div class="status">
-    ● APLIKASI SIAP
-  </div>
-
-  <div class="desc">
-    Potong video panjang menjadi klip pendek dengan lebih mudah.
-    <br><br>
-    ClipForge dijalankan menggunakan teknologi Gemini.
-  </div>
-
-  <a
-    class="button"
-    href="https://share.gemini.google/DJec3zIE8Oem">
-    🚀 Buka ClipForge
-  </a>
-
-  <div class="note">
-    Akses pengguna ClipForge Studio • MOI Apps Studio
-  </div>
-
-</div>
 
 </body>
 </html>
-
-
-
- 
-  
